@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "personal_fitness_assistant"
+version = "0.1.0"
+description = "A tool for retrieving and analyzing fitness-related documents"
+authors = [
+    {name = "AI Assistant", email = "example@example.com"}
+]
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.dependencies]
+langchain = "*"
+langchain-openai = "*"
+langchain-anthropic = "*"
+langchain-community = "*"
+scikit-learn = "*"
+beautifulsoup4 = "*"
+lxml = "*"
+pandas = "*"
+pyarrow = "*"
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "black",
+    "isort",
+    "mypy",
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 88
+target-version = ["py38"]
+
+[tool.isort]
+profile = "black"

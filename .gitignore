@@ -1,0 +1,7 @@
+ 
+*.pyc
+__pycache__/
+.env
+*.parquet
+data/user_data/
+.vscode/
